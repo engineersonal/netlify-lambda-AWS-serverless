@@ -34,7 +34,7 @@ fetchUsers().then(data => {
         link.appendChild(document.createTextNode(user.login));
         link.href = user.html_url;
         link.target = '_blank';
-        link.appendChild(link);
+        li.appendChild(link);
         userList.appendChild(li);
     });
     
