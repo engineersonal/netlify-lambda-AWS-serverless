@@ -9,7 +9,7 @@ const fetchUsers = async () => {
 
         return {
             statusCode: 200,
-            body: data.value
+            body: data
             // if you want to return whole json string
             // headers: { 'Content-Type': 'application/json' },
             // body: JSON.stringify(data)
@@ -27,7 +27,7 @@ fetchUsers().then(data => {
 
     userList = document.querySelector('#users');
 
-    data.forEach(user=>{
+    data.body.forEach(user=>{
         const li = document.createElement('li');
         li.className = 'list-group-item';
         const link = document.createElement('a');
